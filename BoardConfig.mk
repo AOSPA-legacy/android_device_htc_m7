@@ -28,20 +28,14 @@
 -include device/htc/m7-common/BoardConfigCommon.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := m7,m7ul
+TARGET_OTA_ASSERT_DEVICE := m7,m7att,m7tmo,m7ul
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := m7
 
 # Filesystem
-BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776704
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1946156032
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 27917287424
-BOARD_FLASH_BLOCK_SIZE := 131072
-
-# RIL
-BOARD_PROVIDES_LIBRIL := true
 
 # cat /proc/emmc:
 # dev:        size     erasesize name
@@ -68,4 +62,4 @@ BOARD_PROVIDES_LIBRIL := true
 # mmcblk0p29: 06069e00 00000200 "reserve"
 
 # inherit from the proprietary version
--include vendor/htc/m7ul/BoardConfigVendor.mk
+-include vendor/htc/m7/BoardConfigVendor.mk
